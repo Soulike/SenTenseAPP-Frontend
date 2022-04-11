@@ -1,0 +1,45 @@
+@import "lib/bootstrap-5.1.3/css/bootstrap.min.css";
+
+main {
+    padding: 5vh 5vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2vh;
+    column-gap: 2vw;
+}
+
+#buttonContainer {
+    grid-row: 1/2;
+    grid-column: 1/3;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#inputTextArea {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+#outputTextArea {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+#invalidInputToast {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
