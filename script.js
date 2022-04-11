@@ -2,14 +2,12 @@ const $button = document.querySelector('#button');
 const $inputTextArea = document.querySelector('#inputTextArea');
 const $outputTextArea = document.querySelector('#outputTextArea');
 
-const inputRegex = /^[\x00-\xff]+$/;
-
 $button.addEventListener('click', async () =>
 {
-    const text = $inputTextArea.value;
-    if (!inputRegex.test(text))
+    const text = $inputTextArea.value.trim();
+    if (text.length === 0)
     {
-        showToast('输入为空或包含不合法字符');
+        showToast('输入为空');
         $inputTextArea.focus();
         $inputTextArea.select();
     }
