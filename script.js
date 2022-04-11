@@ -1,7 +1,3 @@
-import './lib/bootstrap-5.1.3/js/bootstrap.min.js';
-import {showToast} from './util.js';
-import {postSentence} from './API.js';
-
 const $button = document.querySelector('#button');
 const $inputTextArea = document.querySelector('#inputTextArea');
 const $outputTextArea = document.querySelector('#outputTextArea');

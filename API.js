@@ -1,11 +1,9 @@
-import {BACKEND_ADDRESS} from './CONFIG.js';
-
 /**
  * @param {string} text
  * @returns {Promise<{code: number, result: string}>>}
  * @throws - Throws Error if encountering network issue
  */
-export async function postSentence(text)
+async function postSentence(text)
 {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
